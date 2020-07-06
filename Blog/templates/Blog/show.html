@@ -1,0 +1,20 @@
+{% extends 'Blog/base.html' %}
+{% load static %}
+{% block content %}
+<section class="my-5" >
+
+<div class="container">
+
+    <h1 class="mt-4">{{post.title}}</h1>
+    <p class="lead">
+        by  <b>{{post.author}}</b>
+      </p>
+      <hr>
+      <p>Posted on {{post.published_date}}</p>
+      <hr>
+      <p >{{ post.text|safe}}</p>
+
+    </div>
+
+</section>
+{% endblock content %}

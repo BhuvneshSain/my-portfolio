@@ -1,0 +1,25 @@
+{% extends 'Blog/base.html' %} {% load static %} {% block content %}
+<section class="my-5">
+  <div class="container">
+    {% for i in post %}
+    <hr />
+    <div class="card text-center">
+      <div class="card-header">By <b>{{i.author}}</b></div>
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p class="card-text">{{i.pre_text}}...</p>
+        <p>
+          <a class="btn btn-primary" href="{% url 'show' pk=i.pk %}"
+            >Read more →</a
+          >
+        </p>
+      </div>
+      <div class="card-footer text-muted">
+        Posted on {{i.published_date}}
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

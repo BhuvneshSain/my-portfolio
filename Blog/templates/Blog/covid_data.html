@@ -1,0 +1,50 @@
+{% extends 'Blog/base.html' %}
+{% load static %}
+{% block content %}
+<section class="my-2" >
+
+   {{ map|safe }} 
+
+<br>
+   <hr>
+   <div class="row">
+      <div class="col">
+          <div class="card text-center">
+            <h5 class="card-header">Confirmed</h5>
+            <div class="card-body">
+              <h1 class="card-title">{{covid.Confirmed}}</h1>
+        
+            </div>
+          </div>
+          </div>
+          <br>
+  <div class="col">
+    <div class="card text-center">
+      <h5 class="card-header">Recovered</h5>
+      <div class="card-body">
+        <h1 class="card-title">{{covid.Recovered}}</h1>
+  
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="col">
+      <div class="card text-center">
+        <h5 class="card-header">Deaths</h5>
+        <div class="card-body">
+          <h1 class="card-title">{{covid.Deaths}}</h1>
+        </div>
+      </div>
+      </div>
+      <br>
+    <div class="col">
+      <div class="card text-center">
+        <h5 class="card-header">Active</h5>
+        <div class="card-body">
+          <h1 class="card-title">{{covid.Active}}</h1>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
+{% endblock content %}

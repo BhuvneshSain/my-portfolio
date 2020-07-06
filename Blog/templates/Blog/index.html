@@ -1,0 +1,139 @@
+{% extends 'Blog/base.html' %} {% load static %} {% block content %}
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+    <!-- Masthead Avatar Image--><img
+      class="masthead-avatar mb-5"
+      src="{% static 'img/avataaars.svg' %}"
+      alt=""
+    />
+    <!-- Masthead Heading-->
+    <h1 class="masthead-heading mb-0">Code With Bhuvnesh</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <!-- Masthead Subheading-->
+    <p class="pre-wrap masthead-subheading font-weight-light mb-0">
+      Data Science Aspirant IIT Guwahati.
+    </p>
+  </div>
+</header>
+<section class="page-section portfolio" id="portfolio">
+  <div class="container">
+    <!-- Portfolio Section Heading-->
+    <div class="text-center">
+      <h2 class="page-section-heading text-secondary mb-0 d-inline-block">
+        BLOGS
+      </h2>
+    </div>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card text-center">
+            <div class="card-header">By <b>{{post.0.author}}</b></div>
+            <div class="card-body">
+              <h5 class="card-title">{{post.0.title}}</h5>
+              <p class="card-text">{{post.0.pre_text}}...</p>
+              <p>
+                <a class="btn btn-primary" href="{% url 'show' pk=post.0.pk %}"
+                  >Read more →</a
+                >
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on {{post.0.published_date}}
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          {% for i in post|slice:"1:" %}
+
+          <div class="card text-center">
+            <div class="card-header">By <b>{{i.author}}</b></div>
+            <div class="card-body">
+              <h5 class="card-title">{{i.title}}</h5>
+              <p class="card-text">{{i.pre_text}}...</p>
+              <p>
+                <a class="btn btn-primary" href="{% url 'show' pk=i.pk %}"
+                  >Read more →</a
+                >
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on {{i.published_date}}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+  <div class="container">
+    <!-- About Section Heading-->
+    <div class="text-center">
+      <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+    </div>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <!-- About Section Content-->
+    {% include 'Blog/my-intro.html' %}
+  </div>
+</section>
+<section class="page-section" id="contact">
+  <div class="container">
+    <!-- Contact Section Heading-->
+    <div class="text-center">
+      <h2 class="page-section-heading text-secondary d-inline-block mb-0">
+        CONTACT
+      </h2>
+    </div>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <!-- Contact Section Content-->
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="d-flex flex-column align-items-center">
+          <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+          <div class="text-muted">Phone</div>
+          <div class="lead font-weight-bold">+91 9649569940 (Whatsapp)</div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="d-flex flex-column align-items-center">
+          <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+          <div class="text-muted">Email</div>
+          <a
+            class="lead font-weight-bold"
+            href="mailto:bhuvneshsain344@gmail.com"
+            >bhuvneshsain344@gmail.com</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
