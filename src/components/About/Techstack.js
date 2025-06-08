@@ -9,8 +9,12 @@ import {
 } from "react-icons/di";
 import {
   SiVite,
-  SiNetlify,
+  SiPython,
+  SiDjango,
+  SiFirebase,
+
 } from "react-icons/si";
+;
 
 function Techstack() {
   return (
@@ -29,11 +33,17 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiVite />
       </Col>
+            <Col xs={4} md={2} className="tech-icons">
+        <SiFirebase />
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNetlify />
+        <SiPython />
+      </Col>
+            <Col xs={4} md={2} className="tech-icons">
+        <SiDjango />
       </Col>
     </Row>
   );
