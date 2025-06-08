@@ -6,10 +6,10 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
-  AiOutlineMail,
+
 } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FiPhoneCall } from "react-icons/fi";
+
 
 function Home2() {
   return (
@@ -111,26 +111,7 @@ function Home2() {
                   <IoLogoWhatsapp />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="tel:+917976552402"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <FiPhoneCall />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="mailto:bhuvnesh.office344@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiOutlineMail />
-                </a>
-              </li>
+
             </ul>
           </Col>
         </Row>

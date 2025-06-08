@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 html {
   --section-background-color: linear-gradient(
     to bottom left,
@@ -12,6 +18,25 @@ html {
   );
 
   --imp-text-color: #c770f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto; /* Only allow vertical scrolling on the body */
+  max-width: 100vw; /* Prevent content from causing horizontal scroll */
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .purple {
@@ -248,6 +273,8 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  pointer-events: none; /* Let clicks pass through to content */
+  z-index: -2; /* Keep it behind content */
 }
 
 .home-header {
@@ -260,8 +287,12 @@ button:focus {
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
+  padding-bottom: 70px !important;
   padding-top: 30px !important;
+  min-height: calc(100vh - 170px); /* Account for navbar and footer */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent this container from scrolling */
 }
 
 .home-content {
@@ -319,8 +350,10 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important;
-  padding-top: 70px !important;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .home-about-description {
@@ -402,11 +435,38 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
+  flex-shrink: 0;
   background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: auto;
+  position: relative;
+  z-index: 1000;
+  border-top: 1px solid rgba(200, 137, 230, 0.1);
 }
+
+/* Footer container specific styles */
+.footer-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 767px) {
+  .footer {
+    padding: 0.5rem 0;
+  }
+  
+  .footer h3 {
+    font-size: 0.85em;
+  }
+  
+  .footer-icons {
+    margin-top: 0.3em !important;
+  }
+}
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -447,8 +507,14 @@ button:focus {
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-bottom: 70px !important; /* Increased bottom padding for footer */
   background-image: var(--section-background-color) !important;
+  min-height: calc(100vh - 170px); /* Account for navbar and footer */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent container from scrolling in both directions */
+  width: 100%;
+  max-width: 100%;
 }
 
 .project-card {
@@ -543,11 +609,35 @@ button:focus {
 /* --------- */
 
 .about-section {
-  position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  animation: slideDown 0.5s ease-out forwards;
+  position: relative;
+  padding-top: 100px !important;
+  padding-bottom: 70px !important; /* Increased bottom padding for footer */
   background-image: var(--section-background-color) !important;
   color: white !important;
+  min-height: calc(100vh - 170px); /* Account for navbar and footer */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  overflow: hidden; /* Prevent container from scrolling in both directions */
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-section > .container {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tech-icons {
@@ -605,9 +695,15 @@ button:focus {
 .resume-section {
   position: relative !important;
   padding-top: 110px !important;
-  padding-bottom: 30px !important;
+  padding-bottom: 70px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  min-height: calc(100vh - 170px); /* Account for navbar and footer */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent container from scrolling in both directions */
+  width: 100%;
+  max-width: 100%;
 }
 
 .resume {
@@ -893,5 +989,149 @@ button:focus {
     font-size: 1.3rem;
   }
 }
+
+/* Page Transition Styles */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Page Transitions */
+.project-section,
+.resume-section,
+.home-section,
+.about-section {
+  animation: fadeInTop 0.5s ease-out forwards;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-content {
+  opacity: 0;
+  animation: contentFadeIn 0.5s ease-out 0.2s forwards;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Improvements */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-heading, 
+.main-name,
+.home-header h1, 
+.heading-name,
+.about-content h1,
+.resume-content h1 {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+/* Different animation delay for different sections */
+.home-content h1:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.home-content h1:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.home-about-description {
+  animation: slideInFromTop 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* GitHub Stats styling */
+.github-stats-section {
+  padding: 0 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.github-calendar-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.github-calendar {
+  margin-bottom: 2rem;
+}
+
+.github-stats-row {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.github-card-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(200, 137, 230, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.github-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(126, 87, 194, 0.15);
+  border-color: rgba(200, 137, 230, 0.3);
+}
+
+.github-card-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .github-calendar-container {
+    padding: 5px;
+    margin: 0 -15px;
+  }
+  
+  .react-activity-calendar {
+    overflow-x: auto;
+    padding: 5px;
+  }
+  
+  .github-stats-card {
+    margin-bottom: 1rem;
+  }
+}
+
+
 
 

@@ -4,7 +4,6 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
-  AiOutlineMail,
 } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoIosCall } from "react-icons/io";
@@ -13,13 +12,14 @@ import { IoMail } from "react-icons/io5";
 
 function Footer() {
   let date = new Date();
-  let year = date.getFullYear();
+  let year = date.getFullYear();  
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Bhuvnesh Sain</h3>
-        </Col>
+    <footer className="footer">
+      <Container fluid className="footer-container">
+        <Row className="align-items-center">
+          <Col md="4" className="footer-copywright">
+            <h3>Designed and Developed by Bhuvnesh Sain</h3>
+          </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} BS</h3>
         </Col>
@@ -89,6 +89,7 @@ function Footer() {
         </Col>
       </Row>
     </Container>
+    </footer>
   );
 }
 
