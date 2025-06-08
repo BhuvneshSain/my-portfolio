@@ -1,6 +1,5 @@
 <h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
+  Portfolio Website - v2.0<br/>  <a href="https://github.com/BhuvneshSain" target="_blank">Bhuvnesh Sain</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
@@ -12,35 +11,34 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
 
 </center>
 
 <h3 align="center">
     🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    <a href="https://github.com/BhuvneshSain/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
     🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
+    <a href="https://github.com/BhuvneshSain/Portfolio/issues">Request Feature</a>
 </h3>
 
-## TL;DR
+## About
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+A modern portfolio website showcasing my professional journey as a Basic Computer Instructor and Full Stack Web Developer.
 
 ## Built With
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio features my experience, projects, and technical skills. Built with modern web technologies:<br/>
 
-This project was built using these technologies.
-
+- HTML5 & CSS3
+- JavaScript (ES6+)
 - React.js
 - Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
+- Firebase
+- Vite
+- Advanced Python
+- VS Code
+- Netlify
 
 ## Features
 
@@ -69,8 +67,12 @@ The page will reload if you make edits.
 Open the project folder and Navigate to `/src/components/`. <br/>
 You will find all the components used and you can edit your information accordingly.
 
-### Show your support
+### Connect With Me
 
-Give a ⭐ if you like this website!
+Feel free to reach out and connect!
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+- GitHub: [BhuvneshSain](https://github.com/BhuvneshSain)
+- Twitter: [@sain_bhuvnesh_](https://x.com/sain_bhuvnesh_)
+- Instagram: [@bhuvnesh_sain_0110](https://www.instagram.com/bhuvnesh_sain_0110/)
+- WhatsApp: [Chat with me](https://wa.me/917976552402)
+- Email: bhuvnesh.office344@gmail.com

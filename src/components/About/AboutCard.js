@@ -7,14 +7,12 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
+          <p style={{ textAlign: "justify" }}>            Hi Everyone, I am <span className="purple">Bhuvnesh Sain </span>
+            from <span className="purple">Bikaner, India.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
+            I am currently working as a Basic Computer Instructor at Govt Sr. Sec. School, Sherera, Bikaner.
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
+            I am also a freelance web developer specializing in creating modern web applications.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!

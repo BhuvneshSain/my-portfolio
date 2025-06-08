@@ -7,7 +7,7 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function Home2() {
   return (
@@ -18,43 +18,43 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            <p className="home-about-body">              I am passionate about teaching and web development, combining both to create
+              impactful learning experiences. 🎓
               <br />
-              <br />I am fluent in classics like
+              <br />              I am proficient in modern web technologies and programming languages like
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> HTML5, CSS3, JavaScript, Node.js, Firebase, and Advanced Python </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My expertise lies in creating &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">responsive web applications</b> and
+                delivering{" "}
                 <b className="purple">
-                  Blockchain.
+                  computer education
                 </b>
               </i>
               <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              <br />              I specialize in developing modern web applications using
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  React.js, Node.js, and Vite
                 </b>
               </i>
-              &nbsp; like
+              &nbsp; with
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> Firebase </b>
+              </i>
+              backend and deploying them on
+              <i>
+                <b className="purple"> Netlify</b>
               </i>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+            <Tilt>              <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
@@ -66,8 +66,7 @@ function Home2() {
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
+                <a                  href="https://github.com/BhuvneshSain"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -76,33 +75,30 @@ function Home2() {
                 </a>
               </li>
               <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
+                <a                  href="https://x.com/sain_bhuvnesh_"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiOutlineTwitter />
-                </a>
+                  <AiOutlineTwitter />                </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                  href="https://www.instagram.com/bhuvnesh_sain_0110/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
+                  className="icon-colour home-social-icons"
+                >                  <AiFillInstagram />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://wa.me/917976552402"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <IoLogoWhatsapp />
                 </a>
               </li>
             </ul>
