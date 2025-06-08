@@ -7,7 +7,9 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FiPhoneCall } from "react-icons/fi";
+import { IoIosCall } from "react-icons/io";
+import { IoMail } from "react-icons/io5";
+
 
 function Footer() {
   let date = new Date();
@@ -70,7 +72,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FiPhoneCall />
+                <IoIosCall  />
               </a>
             </li>
             <li className="social-icons">
@@ -80,7 +82,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiOutlineMail />
+                <IoMail  />
               </a>
             </li>
           </ul>
