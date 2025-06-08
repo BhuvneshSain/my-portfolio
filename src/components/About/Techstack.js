@@ -1,52 +1,79 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Row } from "react-bootstrap";
 import {
   DiJavascript1,
   DiReact,
   DiGit,
   DiHtml5,
   DiCss3,
+  DiPython,
+  DiNodejs,
+  DiMongodb,
 } from "react-icons/di";
 import {
   SiVite,
-  SiPython,
   SiDjango,
   SiFirebase,
-
+  SiTailwindcss,
+  SiFlask,
+  SiExpress,
+  SiMysql,
+  SiBootstrap,
 } from "react-icons/si";
-;
+import { initializeCardEffects } from "./CardEffect";
 
-function Techstack() {
+const TechStack = () => {
+  useEffect(() => {
+    initializeCardEffects();
+  }, []);
+
+  const technologies = {
+    "Frontend Development": [
+      { icon: DiHtml5, name: "HTML5" },
+      { icon: DiCss3, name: "CSS3" },
+      { icon: DiJavascript1, name: "JavaScript" },
+      { icon: SiBootstrap, name: "Bootstrap" },
+      { icon: SiTailwindcss, name: "Tailwind" },
+    ],
+    "Frontend Frameworks": [
+      { icon: DiReact, name: "React" },
+      { icon: SiVite, name: "Vite" },
+    ],
+    "Backend Development": [
+      { icon: DiPython, name: "Python" },
+      { icon: SiDjango, name: "Django" },
+      { icon: SiFlask, name: "Flask" },
+      { icon: DiNodejs, name: "Node.js" },
+      { icon: SiExpress, name: "Express" },
+    ],
+    "Database & DevOps": [
+      { icon: SiMysql, name: "MySQL" },
+      { icon: DiMongodb, name: "MongoDB" },
+      { icon: DiGit, name: "Git" },
+      { icon: SiFirebase, name: "Firebase" },
+    ],
+  };
+
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVite />
-      </Col>
-            <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPython />
-      </Col>
-            <Col xs={4} md={2} className="tech-icons">
-        <SiDjango />
-      </Col>
+    <Row className="tech-stack-container">
+      {Object.entries(technologies).map(([category, skills]) => (
+        <div key={category} className="tech-category">
+          <h3 className="category-title">{category}</h3>
+          <div className="skills-grid">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              return (
+                <div key={index} className="tech-icon-card" title={skill.name}>
+                  <Icon />
+                  <span className="tech-name">{skill.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </Row>
   );
-}
+};
 
-export default Techstack;
+export default TechStack;

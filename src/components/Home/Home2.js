@@ -6,8 +6,10 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FiPhoneCall } from "react-icons/fi";
 
 function Home2() {
   return (
@@ -18,12 +20,17 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p className="home-about-body">              I am passionate about teaching and web development, combining both to create
-              impactful learning experiences. 🎓
+            <p className="home-about-body">
+              I am passionate about teaching and web development, combining both to
+              create impactful learning experiences. 🎓
               <br />
-              <br />              I am proficient in modern web technologies and programming languages like
+              <br />I am proficient in modern web technologies and programming
+              languages like
               <i>
-                <b className="purple"> HTML5, CSS3, JavaScript, Node.js, Firebase, and Advanced Python </b>
+                <b className="purple">
+                  {" "}
+                  HTML5, CSS3, JavaScript, Node.js, Firebase, and Advanced Python{" "}
+                </b>
               </i>
               <br />
               <br />
@@ -31,12 +38,10 @@ function Home2() {
               <i>
                 <b className="purple">responsive web applications</b> and
                 delivering{" "}
-                <b className="purple">
-                  computer education
-                </b>
+                <b className="purple">computer education</b>
               </i>
               <br />
-              <br />              I specialize in developing modern web applications using
+              <br /> I specialize in developing modern web applications using
               <i>
                 <b className="purple">
                   {" "}
@@ -54,7 +59,8 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>              <img src={myImg} className="img-fluid" alt="avatar" />
+            <Tilt>
+              <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
@@ -66,21 +72,24 @@ function Home2() {
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
-                <a                  href="https://github.com/BhuvneshSain"
+                <a
+                  href="https://github.com/BhuvneshSain"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
                   <AiFillGithub />
                 </a>
               </li>
               <li className="social-icons">
-                <a                  href="https://x.com/sain_bhuvnesh_"
+                <a
+                  href="https://x.com/sain_bhuvnesh_"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
-                  <AiOutlineTwitter />                </a>
+                  <AiOutlineTwitter />
+                </a>
               </li>
               <li className="social-icons">
                 <a
@@ -88,7 +97,8 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
-                >                  <AiFillInstagram />
+                >
+                  <AiFillInstagram />
                 </a>
               </li>
               <li className="social-icons">
@@ -101,6 +111,26 @@ function Home2() {
                   <IoLogoWhatsapp />
                 </a>
               </li>
+              <li className="social-icons">
+                <a
+                  href="tel:+917976552402"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FiPhoneCall />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="mailto:bhuvnesh.office344@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiOutlineMail />
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
@@ -108,4 +138,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;
