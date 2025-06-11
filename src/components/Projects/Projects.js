@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import karniExim from "../../Assets/Projects/karni-exim_html.png";
 import karniExamReact from "../../Assets/Projects/karni-exim_react_vite_firebase.png";
 import yogisha from "../../Assets/Projects/yogisha_nest_react.png";
+import subhPortfolio from "../../Assets/Projects/subh-portfolio.png"; // Note: You may need to replace this with the actual image from the chat
 
 function Projects() {
   return (
@@ -17,9 +18,21 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={subhPortfolio}
+              isBlog={false}
+              isNew={true}
+              title="Subhashish's Portfolio"
+              description="A modern, responsive portfolio website built with React.js. Features smooth animations, dark theme UI, interactive elements, and showcases developer skills and projects in an elegant layout."
+              ghLink="https://github.com/BhuvneshSain/subh-portfolio"
+              demoLink="https://subht.netlify.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
-            <ProjectCard              imgPath={karniExamReact}
+            <ProjectCard
+              imgPath={karniExamReact}
               isBlog={false}
               title="Karni Exim - React Version"
               description="Modern redesign of Karni Exim website using React, Vite, and Firebase. Features improved UI/UX, dynamic product catalog, responsive design, and optimized performance for better user experience."
@@ -27,9 +40,9 @@ function Projects() {
               demoLink="https://karni-exim-new.netlify.app/"
             />
           </Col>
-
           <Col md={4} className="project-card">
-            <ProjectCard              imgPath={karniExim}
+            <ProjectCard
+              imgPath={karniExim}
               isBlog={false}
               title="Karni Exim - HTML Version"
               description="The original production website for Karni Exim built with HTML, CSS, and JavaScript. Features a professional design, product showcase, company information, and contact details."
@@ -37,9 +50,12 @@ function Projects() {
               demoLink="https://karniexim.com/"
             />
           </Col>
+        </Row>
 
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
-            <ProjectCard              imgPath={yogisha}
+            <ProjectCard
+              imgPath={yogisha}
               isBlog={false}
               title="Yogisha's Nest"
               description="An elegant e-commerce platform built with React, showcasing wellness and lifestyle products. Features a modern UI, responsive design, and seamless shopping experience."
