@@ -26,7 +26,7 @@ function Projects() {
               title="Subhashish's Portfolio"
               description="A modern, responsive portfolio website built with React.js. Features smooth animations, dark theme UI, interactive elements, and showcases developer skills and projects in an elegant layout."
               ghLink="https://github.com/BhuvneshSain/subh-portfolio"
-              demoLink="https://subht.netlify.app/"
+              demoLink="https://subhashish.netlify.app/"
             />
           </Col>
 
